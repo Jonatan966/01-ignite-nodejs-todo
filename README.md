@@ -4,7 +4,7 @@ Uma API para gerenciar tarefas, desenvolvida durante o curso de NodeJS da Rocket
 
 ## Requisitos
 
-- [ ] Deve ser possível criar um novo usuário
+- [x] Deve ser possível criar um novo usuário
 - [ ] Deve ser possível listar todas as tarefas de um usuário
 - [ ] Deve ser possível criar uma nova tarefa
 - [ ] Deve ser possível atualizar uma tarefa
@@ -13,5 +13,5 @@ Uma API para gerenciar tarefas, desenvolvida durante o curso de NodeJS da Rocket
 
 ## Regras de Negócio
 
-- [ ] Não deve ser possível criar um usuário com username já existente
+- [x] Não deve ser possível criar um usuário com username já existente
 - [ ] Não deve ser possível atualizar uma tarefa inexistente
