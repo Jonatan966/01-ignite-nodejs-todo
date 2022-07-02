@@ -104,7 +104,7 @@ app.put(
     } = request;
 
     todo.title = title;
-    todo.deadline = deadline;
+    todo.deadline = new Date(deadline);
 
     return response.json(todo);
   }
