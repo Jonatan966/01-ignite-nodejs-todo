@@ -35,7 +35,7 @@ function checksExistsUserTodo(request, response, next) {
   const targetTodo = user.todos.find((todo) => todo.id === todoID);
 
   if (!targetTodo) {
-    return response.status(400).json({
+    return response.status(404).json({
       error: "Todo not exists",
     });
   }
@@ -123,8 +123,17 @@ app.patch(
   }
 );
 
-app.delete("/todos/:id", checksExistsUserAccount, (request, response) => {
-  // Complete aqui
-});
+app.delete(
+  "/todos/:id",
+  checksExistsUserAccount,
+  checksExistsUserTodo,
+  (request, response) => {
+    const { todo, user } = request;
+
+    user.todos.splice(todo, 1);
+
+    return response.status(204).send();
+  }
+);
 
 module.exports = app;
