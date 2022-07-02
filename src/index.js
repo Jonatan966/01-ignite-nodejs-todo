@@ -119,7 +119,7 @@ app.patch(
 
     todo.done = true;
 
-    return response.status(200).send();
+    return response.status(200).json(todo);
   }
 );
 
